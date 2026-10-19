@@ -1,4 +1,8 @@
 # --- Document loading & chunking ---
+# pdfminer.six is the extractor used by the pipeline: pypdf misreads this PDF's
+# letter-spacing as word breaks ("Ar ticle" x507). pypdf is kept so the notebook
+# can reproduce that before/after comparison for the report.
+pdfminer.six==20250506
 pypdf==6.1.1
 
 # --- Bi-encoder (dense embeddings) + Cross-encoder (re-ranking) ---
